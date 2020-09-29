@@ -1,5 +1,5 @@
 # EyeTracker
-Final thesis of my Bachelor degree
+Final thesis of my Bachelor degree\n
 \subsubsection{Prepare the Data}
 Download the dataset from the Gazecapture project on this link \newline https://gazecapture.csail.mit.edu/download.php . It is a very large file, around 300GB, and it will take a long time to download depending on your connection. Once, the data is downloaded decompress the main zip file and all of the zip files inside it, which correspond to each of the subjects. If you have bash you can execute this command: \newline \textit{for a in `ls -1 *.tar.gz`; do gzip -dc \$a | tar xf -; done} \newline
 It will automatically decompress all of the zip files in the current directory. Once the files are decompressed execute the python script prepareDataset.py. This is a script made by \cite{krafka2016eye} that takes two arguments: the dataset path with the extracted subject folders and the destination folder. This script takes all of the valid frames for each subject and copies a crop of the face, right eye and left eye into the corresponding folder, appleFace, appleRightEye or appleLeftEye in each subject's directory. After this we also need to keep the following files for later processing: dotInfo.json, faceGrid.json and info.json. The script copyJsonFiles.py will do it for you and takes the same two arguments as the previous script. 
