@@ -23,7 +23,7 @@ dataPath = "../data"
 if regions == 15:
     destinationPath = "./dataset"
 elif regions == 6:
-    destinationPAth = "./dataset6Regions"
+    destinationPath = "./dataset6Regions"
 
 #create directory to store data
 paths = ('train', 'test', 'validation')
